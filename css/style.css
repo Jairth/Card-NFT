@@ -36,7 +36,6 @@ main {
 }
 
 .card__img {
-  display: flex;
   border-radius: .59rem;
   position: relative;
   cursor: pointer;
