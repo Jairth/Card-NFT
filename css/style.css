@@ -1,0 +1,183 @@
+@import url('./reset.css');
+
+@import url('https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900');
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main: hsl(217, 54%, 11%);
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Outfit';
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background: var(--Very-dark-blue-main);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__container {
+  background: var(--Very-dark-blue-card);
+
+  width: 20.625rem;
+  height: 34.375rem;
+
+  border-radius: 1rem;
+  padding: 1.5625em;
+}
+
+.card__img {
+  display: flex;
+  border-radius: .59rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__img::before {
+  content: ' ';
+  position: absolute;
+  background: var(--Cyan);
+  opacity: .4;
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: .59rem;
+}
+
+.card__img:hover::before {
+  display: block;
+}
+
+.card__img::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/icon-view.svg') no-repeat center;
+  display: none;
+}
+
+.card__img:hover::after {
+  display: block;
+}
+
+.card__img img {
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.card__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25em 0;
+}
+
+.card__info-text h1 {
+  display: inline-block;
+  font-size: 1.375rem;
+  font-weight: 500;
+
+  color: var(--White);
+  padding: 0.3em 0;
+  cursor: pointer;
+}
+
+.card__info-text h1:hover{
+  color: var(--Cyan);
+}
+
+.card__info-text p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.625em;
+
+  color: var(--Soft-blue);
+  padding: 0.625em 0;
+}
+
+.card__info-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 6px 0;
+}
+
+.card__info-price-eth {
+  display: flex;
+  color: var(--Cyan);
+}
+
+.card__info-price-eth div {
+  padding-top: 0.12625em;
+  margin-right: 0.4em;
+}
+
+.card__info-price-days {
+  display: flex;
+  color: var(--Soft-blue);
+}
+
+.card__info-price-days div {
+  padding-top: 0.2em;
+  margin-right: 0.4em;
+}
+
+.card__info-avatar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  padding: 1.6em 0;
+  position: relative;
+}
+
+.card__info-avatar::before {
+  content: ' ';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 1px;  
+  background: var(--Very-dark-blue-line);
+}
+
+.card__info-avatar div {
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
+.card__info-avatar div img{
+  width: 2rem;
+}
+
+.card__info-avatar p {
+  font-size: 1rem;
+  font-weight: 300;
+
+  color: var(--Soft-blue);
+  padding: 0 1.1em;
+}
+
+.card__info-avatar strong {
+  color: var(--White);
+  cursor: pointer;
+}
+
+.card__info-avatar strong:hover {
+  color: var(--Cyan);
+}
