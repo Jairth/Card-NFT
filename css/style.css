@@ -49,7 +49,7 @@ main {
   width: 100%;
   height: 100%;
   border-radius: .59rem;
-  transition: opacity .5s linear;
+  transition: opacity .3s linear;
 }
 
 .card__img:hover::before {
@@ -65,7 +65,7 @@ main {
   height: 100%;
   opacity: 0;
   background: url('/images/icon-view.svg') no-repeat center;
-  transition: opacity .5s linear;
+  transition: opacity .3s linear;
 }
 
 .card__img:hover::after {
@@ -82,6 +82,11 @@ main {
   display: flex;
   flex-direction: column;
   padding: 1.25em 0;
+  transition: all .3s linear;
+}
+
+.card__info-text {
+  transition: all .3s linear;
 }
 
 .card__info-text h1 {
@@ -92,7 +97,7 @@ main {
   color: var(--White);
   padding: 0.3em 0;
   cursor: pointer;
-  transition: color .5s ease;
+  transition: color .3s linear;
 }
 
 .card__info-text h1:hover{
@@ -177,7 +182,7 @@ main {
 .card__info-avatar strong {
   color: var(--White);
   cursor: pointer;
-  transition: color .5s ease;
+  transition: color .3s linear;
 }
 
 .card__info-avatar strong:hover {
